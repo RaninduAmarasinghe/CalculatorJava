@@ -15,7 +15,57 @@ public class CalculatorJ extends javax.swing.JFrame {
      */
     public CalculatorJ() {
         initComponents();
+        
+        jRadioButton1.setEnabled(false); //on button Disable
     }
+    
+    public void enble(){
+        jTextField1.setEnabled(true);
+        
+        jButton1.setEnabled(true);
+          jButton2.setEnabled(true);
+          jButton3.setEnabled(true);
+          jButton4.setEnabled(true);
+          jButton5.setEnabled(true);
+          jButton6.setEnabled(true);
+          jButton7.setEnabled(true);
+          jButton8.setEnabled(true);
+          jButton9.setEnabled(true);
+          jButton10.setEnabled(true);
+          jButton11.setEnabled(true);
+          jButton13.setEnabled(true);
+          jButton14.setEnabled(true);
+          jButton15.setEnabled(true);
+          jButton16.setEnabled(true);
+          jButton17.setEnabled(true);
+          jButton18.setEnabled(true);
+          jButton19.setEnabled(true);
+        
+    }
+    
+      public void disable(){
+          jTextField1.setEnabled(false);
+          
+          jButton1.setEnabled(false);
+          jButton2.setEnabled(false);
+          jButton3.setEnabled(false);
+          jButton4.setEnabled(false);
+          jButton5.setEnabled(false);
+          jButton6.setEnabled(false);
+          jButton7.setEnabled(false);
+          jButton8.setEnabled(false);
+          jButton9.setEnabled(false);
+          jButton10.setEnabled(false);
+          jButton11.setEnabled(false);
+          jButton13.setEnabled(false);
+          jButton14.setEnabled(false);
+          jButton15.setEnabled(false);
+          jButton16.setEnabled(false);
+          jButton17.setEnabled(false);
+          jButton18.setEnabled(false);
+          jButton19.setEnabled(false);
+        
+      }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -57,6 +107,11 @@ public class CalculatorJ extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("ON");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("OFF");
@@ -69,6 +124,11 @@ public class CalculatorJ extends javax.swing.JFrame {
         jButton1.setText("<--");
 
         jButton2.setText("C");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("+");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -281,6 +341,8 @@ public class CalculatorJ extends javax.swing.JFrame {
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
+        
+        disable(); //call disable method
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -357,6 +419,15 @@ public class CalculatorJ extends javax.swing.JFrame {
         // TODO add your handling code here:
         jTextField1.setText(jTextField1.getText() +".");
     }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        jTextField1.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     /**
      * @param args the command line arguments
