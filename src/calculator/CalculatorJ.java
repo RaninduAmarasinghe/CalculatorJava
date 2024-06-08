@@ -19,8 +19,11 @@ public class CalculatorJ extends javax.swing.JFrame {
         jRadioButton1.setEnabled(false); //on button Disable
     }
     
-    public void enble(){
+    public void enable(){
         jTextField1.setEnabled(true);
+        
+        jRadioButton1.setEnabled(false);
+        jRadioButton2.setEnabled(true);
         
         jButton1.setEnabled(true);
           jButton2.setEnabled(true);
@@ -45,6 +48,10 @@ public class CalculatorJ extends javax.swing.JFrame {
     
       public void disable(){
           jTextField1.setEnabled(false);
+          
+          jRadioButton1.setEnabled(true); 
+          jRadioButton2.setEnabled(false);
+          
           
           jButton1.setEnabled(false);
           jButton2.setEnabled(false);
@@ -427,6 +434,7 @@ public class CalculatorJ extends javax.swing.JFrame {
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
+        enable(); // call method enble 
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     /**
